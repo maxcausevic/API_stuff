@@ -6,7 +6,7 @@ import axios from 'axios';
 const Display = (props) => {
     const [info, setInfo] = useState({});
     useEffect(() => {
-        axios.get('https://swapi.dev/api/${props.category}/${props.id}')
+        axios.get(`https://swapi.dev/api/${props.category}/${props.id}`)
             .then(res => {
                 setInfo(res.data);
             })
